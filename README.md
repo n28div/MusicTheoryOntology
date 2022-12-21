@@ -26,6 +26,7 @@ To give an idea we will show a simple example: given the chord *C:maj* its indiv
 ```
 
 we can infer that this is a `MajorTriad` by using the following axiom (in Manchester Syntax)
+
 ```
 Class: MajorTriad
   ...
@@ -43,7 +44,10 @@ Each property has been added to the corresponding note. The target note has been
 ## Extension analysis
 The final ontology contains a total of 2646 axioms, 1653 more than the original ontology.
 
+## Generating an individual
+The generation of an individual can be performed using the `mto.py` script.
+
 
 [1] [Sabbir M. Rashid, David De Roure, and Deborah L. McGuinness. 2018. A Music Theory Ontology. In Proceedings of the 1st International Workshop on Semantic Applications for Audio and Music (SAAM '18)](http://doi.org/10.1145/3243907.3243913)
 [2] [Christopher Sutton, Yves Raimond, Matthias Mauch, 2007. The OMRAS2 Chord Ontology](https://motools.sourceforge.net/chord_draft_1/chord.html#future)
-[3] TBD
+[3] [Cuthbert, Michael Scott; Ariza, Christopher T., 2010, music21: A Toolkit for Computer-Aided Musicology and Symbolic Music Data](https://dspace.mit.edu/handle/1721.1/84963)

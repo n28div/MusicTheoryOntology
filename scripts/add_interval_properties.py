@@ -11,20 +11,21 @@ import rdflib
 import argparse
 import music21
 
-def mto_to_m21_note(note: str) -> str:
+def m21_to_mto_label(note: str) -> str:
   """
-  Convert an mto note into a music21 note.
+  Convert an a music21 note to an mto note.
   mto notes use Flat instead of - and Sharp instead
   of #.
 
   Args:
-      note (str): Note in mto format
+      note (str): Note in music21 format
   Returns:
-      str: Note in music21 format.
+      str: Note in mto format.
   """
   note = note.replace("-", "Flat")
   note = note.replace("#", "Sharp")
   return note
+
 
 args = argparse.ArgumentParser()
 args.add_argument("-i", "--input", type=str, required=True)
@@ -75,8 +76,8 @@ if __name__ == "__main__":
 
     for name, prop in interval_properties.items():
       interval_semitones = int(graph.value(MTO[name], MTO["hasSemitoneCount"])) % 12
-      subject_note = mto_to_m21_note(m21_note.name)
-      object_note = mto_to_m21_note(m21_note.transpose(interval_semitones).name)
+      subject_note = m21_to_mto_label(m21_note.name)
+      object_note = m21_to_mto_label(m21_note.transpose(interval_semitones).name)
       graph.add((MTO_KB[subject_note], MTO[prop], MTO_KB[object_note]))
 
   print(graph.serialize(format=args.format))
