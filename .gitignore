@@ -1,1 +1,6 @@
 .vscode/
+__pycache__
+.docker/
+.pytest_cache/
+
+data/chords/
