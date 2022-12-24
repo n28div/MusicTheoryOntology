@@ -81,8 +81,9 @@ def convert_chord(chord: str, prefix: str) -> rdflib.Graph:
   chord_graph = rdflib.Graph()
 
   harte = Harte(chord)
-  
-  if len(harte.notes) > 0:
+  intervals = harte.annotateIntervals(inPlace=False, stripSpecifiers=False, returnList=True)
+
+  if len(intervals) > 0:
     root = harte.root()
     root_m21 = Note(root)
     
@@ -96,14 +97,12 @@ def convert_chord(chord: str, prefix: str) -> rdflib.Graph:
     root_mtokb = get_mtokb_note(root_m21)
     chord_graph.add((chord_IRI, CHORD["root"], root_mtokb))
 
-    for note_m21 in harte.notes:
-      note_mtokb = get_mtokb_note(note_m21)
-
-      if note_m21 != root_m21:
-        interval = Interval(root_m21, note_m21)
-        interval_class = convert_interval(interval)
-        chord_graph.add((chord_IRI, CHORD["interval"], interval_class))
-        chord_graph.add((chord_IRI, MTO["hasNote"], note_mtokb))
-
+    for interval in intervals:
+      interval = Interval(interval)
+      interval_class = convert_interval(interval)
+      chord_graph.add((chord_IRI, CHORD["interval"], interval_class))
            
   return chord_graph
+
+if __name__ == "__main__":
+  print(convert_chord("A", "ciao").serialize())

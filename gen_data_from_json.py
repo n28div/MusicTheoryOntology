@@ -4,7 +4,7 @@ import argparse
 import rdflib
 import json
 from music21.chord import ChordException
-from mto.music21 import convert_chord
+from mto.music21_utils import convert_chord
 import tqdm
 
 
@@ -27,9 +27,9 @@ if __name__ == "__main__":
       tmp_graph = convert_chord(chord, args.prefix)
       graph.parse(data=tmp_graph.serialize())
     except Exception as e:
-      print("Error parsing ", chord)
+      tqdm.tqdm.write("Error parsing " + chord)
   
-  graph.serialize(args.out, format=turtle)
+  graph.serialize(args.out, format="ttl")
 
   
   
