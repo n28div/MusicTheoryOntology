@@ -10,21 +10,7 @@ import re
 import rdflib
 import argparse
 import music21
-
-def m21_to_mto_label(note: str) -> str:
-  """
-  Convert an a music21 note to an mto note.
-  mto notes use Flat instead of - and Sharp instead
-  of #.
-
-  Args:
-      note (str): Note in music21 format
-  Returns:
-      str: Note in mto format.
-  """
-  note = note.replace("-", "Flat")
-  note = note.replace("#", "Sharp")
-  return note
+from utils import m21_to_mto_label
 
 
 args = argparse.ArgumentParser()
