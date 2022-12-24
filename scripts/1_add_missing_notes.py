@@ -9,6 +9,7 @@ import rdflib
 import argparse
 import music21
 from utils import m21_to_mto_label, m21_to_leadsheet_label
+from itertools import combinations
 
 args = argparse.ArgumentParser()
 args.add_argument("-i", "--input", type=str, required=True)
@@ -29,7 +30,7 @@ if __name__ == "__main__":
   for note_idx in range(12):  
     note = music21.pitch.Pitch(note_idx)
     notes = [note] + note.getAllCommonEnharmonics()
-    notes_name = map(lambda x: x.name, notes)
+    notes_name = list(map(lambda x: x.name, notes))
 
     for note_name in notes_name:
       if (MTO_KB[note_name], None, None) not in graph:
@@ -39,5 +40,11 @@ if __name__ == "__main__":
         leadsheet_note = m21_to_leadsheet_label(note_name)
         graph.add((mto_kb_iri, RDFS.label, rdflib.Literal(leadsheet_note)))
         graph.add((mto_kb_iri, RDFS.comment, rdflib.Literal(f"{leadsheet_note} Named Note")))
+
+    for note_a, note_b in combinations(notes_name, 2):
+      note_a_iri = MTO_KB[m21_to_mto_label(note_a)]
+      note_b_iri = MTO_KB[m21_to_mto_label(note_b)]
+      graph.add((note_a_iri, OWL.sameAs, note_b_iri))
+      graph.add((note_b_iri, OWL.sameAs, note_a_iri))
 
   print(graph.serialize(format=args.format))
