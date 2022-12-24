@@ -33,9 +33,11 @@ if __name__ == "__main__":
 
     for note_name in notes_name:
       if (MTO_KB[note_name], None, None) not in graph:
-        graph.add((MTO_KB[note_name], RDF.type, MTO["Note"]))
+        mto_kb_iri = MTO_KB[m21_to_mto_label(note_name)]
+        graph.add((mto_kb_iri, RDF.type, MTO["Note"]))
+        
         leadsheet_note = m21_to_leadsheet_label(note_name)
-        graph.add((MTO_KB[note_name], RDFS.label, rdflib.Literal(leadsheet_note)))
-        graph.add((MTO_KB[note_name], RDFS.comment, rdflib.Literal(f"{leadsheet_note} Named Note")))
+        graph.add((mto_kb_iri, RDFS.label, rdflib.Literal(leadsheet_note)))
+        graph.add((mto_kb_iri, RDFS.comment, rdflib.Literal(f"{leadsheet_note} Named Note")))
 
   print(graph.serialize(format=args.format))

@@ -8,6 +8,7 @@ the music21 library.
 """
 import re
 import rdflib
+from rdflib import OWL, RDF, RDFS
 import argparse
 import music21
 from utils import m21_to_mto_label
@@ -22,9 +23,6 @@ if __name__ == "__main__":
 
   MTO = rdflib.Namespace("http://purl.org/ontology/mto/")
   MTO_KB = rdflib.Namespace("http://purl.org/ontology/mto/kb/")
-  OWL = rdflib.OWL
-  RDF = rdflib.RDF
-  RDFS = rdflib.RDFS
 
   graph = rdflib.Graph()
   graph.parse(args.input)
@@ -56,9 +54,9 @@ if __name__ == "__main__":
       graph.add((MTO[property_name], RDFS.comment, rdflib.Literal(comment)))
 
   # instatiate the object property for each note
-  notes = [str(s).split("/")[-1]  for s, _, _ in graph.triples((None, RDF.type, MTO["Note"]))]
-  for note_name in notes:
-    m21_note = music21.note.Note(note_name)
+  for note, _, _ in graph.triples((None, RDF.type, MTO["Note"])):
+    note_name = graph.value(predicate=RDFS.label, subject=note)
+    m21_note = music21.note.Note(note_name.replace("b", "-"))
 
     for name, prop in interval_properties.items():
       interval_semitones = int(graph.value(MTO[name], MTO["hasSemitoneCount"])) % 12

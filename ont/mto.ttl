@@ -883,24 +883,79 @@
     rdfs:range :Note ;
     rdfs:subPropertyOf :hasInterval .
 
-<http://purl.org/ontology/mto/kb/A#> a :Note ;
-    rdfs:label "A#" ;
-    rdfs:comment "A# Named Note" .
-
-<http://purl.org/ontology/mto/kb/A##> a :Note ;
-    rdfs:label "A##" ;
-    rdfs:comment "A## Named Note" .
-
-mto-kb:A- a :Note ;
-    rdfs:label "Ab" ;
-    rdfs:comment "Ab Named Note" .
-
-mto-kb:A-- a :Note ;
+mto-kb:ADoubleFlat a :Note ;
     rdfs:label "Abb" ;
+    :hasAugmentedFifthInterval mto-kb:EFlat ;
+    :hasAugmentedFourthInterval mto-kb:CSharp ;
+    :hasAugmentedSecondInterval mto-kb:BFlat ;
+    :hasAugmentedSeventhInterval mto-kb:G ;
+    :hasAugmentedSixthInterval mto-kb:F ;
+    :hasAugmentedThirdInterval mto-kb:C ;
+    :hasAugmentedUnisonInterval mto-kb:GSharp ;
+    :hasDiminishedFifthInterval mto-kb:CSharp ;
+    :hasDiminishedFourthInterval mto-kb:B ;
+    :hasDiminishedOctaveInterval mto-kb:FSharp ;
+    :hasDiminishedSecondInterval mto-kb:G ;
+    :hasDiminishedSeventhInterval mto-kb:E ;
+    :hasDiminishedSixthInterval mto-kb:D ;
+    :hasDiminishedThirdInterval mto-kb:A ;
+    :hasHalfStep mto-kb:GSharp ;
+    :hasMajorSecondInterval mto-kb:A ;
+    :hasMajorSeventhInterval mto-kb:FSharp ;
+    :hasMajorSixthInterval mto-kb:E ;
+    :hasMajorThirdInterval mto-kb:B ;
+    :hasMinorSecondInterval mto-kb:GSharp ;
+    :hasMinorSeventhInterval mto-kb:F ;
+    :hasMinorSixthInterval mto-kb:EFlat ;
+    :hasMinorThirdInterval mto-kb:BFlat ;
+    :hasPerfectFifthInterval mto-kb:D ;
+    :hasPerfectFourthInterval mto-kb:C ;
+    :hasPerfectOctaveInterval mto-kb:G ;
+    :hasPerfectUnisonInterval mto-kb:G ;
+    :hasSemitone mto-kb:GSharp ;
+    :hasTritone mto-kb:CSharp ;
+    :hasWholeStep mto-kb:A ;
+    :hasWholeTone mto-kb:A ;
     rdfs:comment "Abb Named Note" .
 
+mto-kb:ADoubleSharp a :Note ;
+    rdfs:label "A##" ;
+    :hasAugmentedFifthInterval mto-kb:G ;
+    :hasAugmentedFourthInterval mto-kb:F ;
+    :hasAugmentedSecondInterval mto-kb:D ;
+    :hasAugmentedSeventhInterval mto-kb:B ;
+    :hasAugmentedSixthInterval mto-kb:A ;
+    :hasAugmentedThirdInterval mto-kb:E ;
+    :hasAugmentedUnisonInterval mto-kb:C ;
+    :hasDiminishedFifthInterval mto-kb:F ;
+    :hasDiminishedFourthInterval mto-kb:EFlat ;
+    :hasDiminishedOctaveInterval mto-kb:BFlat ;
+    :hasDiminishedSecondInterval mto-kb:B ;
+    :hasDiminishedSeventhInterval mto-kb:GSharp ;
+    :hasDiminishedSixthInterval mto-kb:FSharp ;
+    :hasDiminishedThirdInterval mto-kb:CSharp ;
+    :hasHalfStep mto-kb:C ;
+    :hasMajorSecondInterval mto-kb:CSharp ;
+    :hasMajorSeventhInterval mto-kb:BFlat ;
+    :hasMajorSixthInterval mto-kb:GSharp ;
+    :hasMajorThirdInterval mto-kb:EFlat ;
+    :hasMinorSecondInterval mto-kb:C ;
+    :hasMinorSeventhInterval mto-kb:A ;
+    :hasMinorSixthInterval mto-kb:G ;
+    :hasMinorThirdInterval mto-kb:D ;
+    :hasPerfectFifthInterval mto-kb:FSharp ;
+    :hasPerfectFourthInterval mto-kb:E ;
+    :hasPerfectOctaveInterval mto-kb:B ;
+    :hasPerfectUnisonInterval mto-kb:B ;
+    :hasSemitone mto-kb:C ;
+    :hasTritone mto-kb:F ;
+    :hasWholeStep mto-kb:CSharp ;
+    :hasWholeTone mto-kb:CSharp ;
+    rdfs:comment "A## Named Note" .
+
 mto-kb:AFlat a :Note ;
-    rdfs:label "Ab"^^xsd:string ;
+    rdfs:label "Ab"^^xsd:string,
+        "Ab" ;
     :hasAugmentedFifthInterval mto-kb:E ;
     :hasAugmentedFourthInterval mto-kb:D ;
     :hasAugmentedSecondInterval mto-kb:B ;
@@ -932,43 +987,13 @@ mto-kb:AFlat a :Note ;
     :hasTritone mto-kb:D ;
     :hasWholeStep mto-kb:BFlat ;
     :hasWholeTone mto-kb:BFlat ;
-    rdfs:comment "Ab Named Note"^^xsd:string ;
+    rdfs:comment "Ab Named Note"^^xsd:string,
+        "Ab Named Note" ;
     owl:sameAs mto-kb:GSharp .
 
-mto-kb:AFlatFlat :hasAugmentedFifthInterval mto-kb:EFlat ;
-    :hasAugmentedFourthInterval mto-kb:CSharp ;
-    :hasAugmentedSecondInterval mto-kb:BFlat ;
-    :hasAugmentedSeventhInterval mto-kb:G ;
-    :hasAugmentedSixthInterval mto-kb:F ;
-    :hasAugmentedThirdInterval mto-kb:C ;
-    :hasAugmentedUnisonInterval mto-kb:GSharp ;
-    :hasDiminishedFifthInterval mto-kb:CSharp ;
-    :hasDiminishedFourthInterval mto-kb:B ;
-    :hasDiminishedOctaveInterval mto-kb:FSharp ;
-    :hasDiminishedSecondInterval mto-kb:G ;
-    :hasDiminishedSeventhInterval mto-kb:E ;
-    :hasDiminishedSixthInterval mto-kb:D ;
-    :hasDiminishedThirdInterval mto-kb:A ;
-    :hasHalfStep mto-kb:GSharp ;
-    :hasMajorSecondInterval mto-kb:A ;
-    :hasMajorSeventhInterval mto-kb:FSharp ;
-    :hasMajorSixthInterval mto-kb:E ;
-    :hasMajorThirdInterval mto-kb:B ;
-    :hasMinorSecondInterval mto-kb:GSharp ;
-    :hasMinorSeventhInterval mto-kb:F ;
-    :hasMinorSixthInterval mto-kb:EFlat ;
-    :hasMinorThirdInterval mto-kb:BFlat ;
-    :hasPerfectFifthInterval mto-kb:D ;
-    :hasPerfectFourthInterval mto-kb:C ;
-    :hasPerfectOctaveInterval mto-kb:G ;
-    :hasPerfectUnisonInterval mto-kb:G ;
-    :hasSemitone mto-kb:GSharp ;
-    :hasTritone mto-kb:CSharp ;
-    :hasWholeStep mto-kb:A ;
-    :hasWholeTone mto-kb:A .
-
 mto-kb:ASharp a :Note ;
-    rdfs:label "A#"^^xsd:string ;
+    rdfs:label "A#"^^xsd:string,
+        "A#" ;
     :hasAugmentedFifthInterval mto-kb:FSharp ;
     :hasAugmentedFourthInterval mto-kb:E ;
     :hasAugmentedSecondInterval mto-kb:CSharp ;
@@ -1000,58 +1025,13 @@ mto-kb:ASharp a :Note ;
     :hasTritone mto-kb:E ;
     :hasWholeStep mto-kb:C ;
     :hasWholeTone mto-kb:C ;
-    rdfs:comment "A# Named Note"^^xsd:string ;
+    rdfs:comment "A# Named Note"^^xsd:string,
+        "A# Named Note" ;
     owl:sameAs :BFlat .
 
-mto-kb:ASharpSharp :hasAugmentedFifthInterval mto-kb:G ;
-    :hasAugmentedFourthInterval mto-kb:F ;
-    :hasAugmentedSecondInterval mto-kb:D ;
-    :hasAugmentedSeventhInterval mto-kb:B ;
-    :hasAugmentedSixthInterval mto-kb:A ;
-    :hasAugmentedThirdInterval mto-kb:E ;
-    :hasAugmentedUnisonInterval mto-kb:C ;
-    :hasDiminishedFifthInterval mto-kb:F ;
-    :hasDiminishedFourthInterval mto-kb:EFlat ;
-    :hasDiminishedOctaveInterval mto-kb:BFlat ;
-    :hasDiminishedSecondInterval mto-kb:B ;
-    :hasDiminishedSeventhInterval mto-kb:GSharp ;
-    :hasDiminishedSixthInterval mto-kb:FSharp ;
-    :hasDiminishedThirdInterval mto-kb:CSharp ;
-    :hasHalfStep mto-kb:C ;
-    :hasMajorSecondInterval mto-kb:CSharp ;
-    :hasMajorSeventhInterval mto-kb:BFlat ;
-    :hasMajorSixthInterval mto-kb:GSharp ;
-    :hasMajorThirdInterval mto-kb:EFlat ;
-    :hasMinorSecondInterval mto-kb:C ;
-    :hasMinorSeventhInterval mto-kb:A ;
-    :hasMinorSixthInterval mto-kb:G ;
-    :hasMinorThirdInterval mto-kb:D ;
-    :hasPerfectFifthInterval mto-kb:FSharp ;
-    :hasPerfectFourthInterval mto-kb:E ;
-    :hasPerfectOctaveInterval mto-kb:B ;
-    :hasPerfectUnisonInterval mto-kb:B ;
-    :hasSemitone mto-kb:C ;
-    :hasTritone mto-kb:F ;
-    :hasWholeStep mto-kb:CSharp ;
-    :hasWholeTone mto-kb:CSharp .
-
-<http://purl.org/ontology/mto/kb/B#> a :Note ;
-    rdfs:label "B#" ;
-    rdfs:comment "B# Named Note" .
-
-<http://purl.org/ontology/mto/kb/B##> a :Note ;
-    rdfs:label "B##" ;
-    rdfs:comment "B## Named Note" .
-
-mto-kb:B- a :Note ;
-    rdfs:label "Bb" ;
-    rdfs:comment "Bb Named Note" .
-
-mto-kb:B-- a :Note ;
+mto-kb:BDoubleFlat a :Note ;
     rdfs:label "Bbb" ;
-    rdfs:comment "Bbb Named Note" .
-
-mto-kb:BFlatFlat :hasAugmentedFifthInterval mto-kb:F ;
+    :hasAugmentedFifthInterval mto-kb:F ;
     :hasAugmentedFourthInterval mto-kb:EFlat ;
     :hasAugmentedSecondInterval mto-kb:C ;
     :hasAugmentedSeventhInterval mto-kb:A ;
@@ -1081,202 +1061,11 @@ mto-kb:BFlatFlat :hasAugmentedFifthInterval mto-kb:F ;
     :hasSemitone mto-kb:BFlat ;
     :hasTritone mto-kb:EFlat ;
     :hasWholeStep mto-kb:B ;
-    :hasWholeTone mto-kb:B .
+    :hasWholeTone mto-kb:B ;
+    rdfs:comment "Bbb Named Note" .
 
-mto-kb:BSharp :hasAugmentedFifthInterval mto-kb:GSharp ;
-    :hasAugmentedFourthInterval mto-kb:FSharp ;
-    :hasAugmentedSecondInterval mto-kb:EFlat ;
-    :hasAugmentedSeventhInterval mto-kb:C ;
-    :hasAugmentedSixthInterval mto-kb:BFlat ;
-    :hasAugmentedThirdInterval mto-kb:F ;
-    :hasAugmentedUnisonInterval mto-kb:CSharp ;
-    :hasDiminishedFifthInterval mto-kb:FSharp ;
-    :hasDiminishedFourthInterval mto-kb:E ;
-    :hasDiminishedOctaveInterval mto-kb:B ;
-    :hasDiminishedSecondInterval mto-kb:C ;
-    :hasDiminishedSeventhInterval mto-kb:A ;
-    :hasDiminishedSixthInterval mto-kb:G ;
-    :hasDiminishedThirdInterval mto-kb:D ;
-    :hasHalfStep mto-kb:CSharp ;
-    :hasMajorSecondInterval mto-kb:D ;
-    :hasMajorSeventhInterval mto-kb:B ;
-    :hasMajorSixthInterval mto-kb:A ;
-    :hasMajorThirdInterval mto-kb:E ;
-    :hasMinorSecondInterval mto-kb:CSharp ;
-    :hasMinorSeventhInterval mto-kb:BFlat ;
-    :hasMinorSixthInterval mto-kb:GSharp ;
-    :hasMinorThirdInterval mto-kb:EFlat ;
-    :hasPerfectFifthInterval mto-kb:G ;
-    :hasPerfectFourthInterval mto-kb:F ;
-    :hasPerfectOctaveInterval mto-kb:C ;
-    :hasPerfectUnisonInterval mto-kb:C ;
-    :hasSemitone mto-kb:CSharp ;
-    :hasTritone mto-kb:FSharp ;
-    :hasWholeStep mto-kb:D ;
-    :hasWholeTone mto-kb:D .
-
-mto-kb:BSharpSharp :hasAugmentedFifthInterval mto-kb:A ;
-    :hasAugmentedFourthInterval mto-kb:G ;
-    :hasAugmentedSecondInterval mto-kb:E ;
-    :hasAugmentedSeventhInterval mto-kb:CSharp ;
-    :hasAugmentedSixthInterval mto-kb:B ;
-    :hasAugmentedThirdInterval mto-kb:FSharp ;
-    :hasAugmentedUnisonInterval mto-kb:D ;
-    :hasDiminishedFifthInterval mto-kb:G ;
-    :hasDiminishedFourthInterval mto-kb:F ;
-    :hasDiminishedOctaveInterval mto-kb:C ;
-    :hasDiminishedSecondInterval mto-kb:CSharp ;
-    :hasDiminishedSeventhInterval mto-kb:BFlat ;
-    :hasDiminishedSixthInterval mto-kb:GSharp ;
-    :hasDiminishedThirdInterval mto-kb:EFlat ;
-    :hasHalfStep mto-kb:D ;
-    :hasMajorSecondInterval mto-kb:EFlat ;
-    :hasMajorSeventhInterval mto-kb:C ;
-    :hasMajorSixthInterval mto-kb:BFlat ;
-    :hasMajorThirdInterval mto-kb:F ;
-    :hasMinorSecondInterval mto-kb:D ;
-    :hasMinorSeventhInterval mto-kb:B ;
-    :hasMinorSixthInterval mto-kb:A ;
-    :hasMinorThirdInterval mto-kb:E ;
-    :hasPerfectFifthInterval mto-kb:GSharp ;
-    :hasPerfectFourthInterval mto-kb:FSharp ;
-    :hasPerfectOctaveInterval mto-kb:CSharp ;
-    :hasPerfectUnisonInterval mto-kb:CSharp ;
-    :hasSemitone mto-kb:D ;
-    :hasTritone mto-kb:G ;
-    :hasWholeStep mto-kb:EFlat ;
-    :hasWholeTone mto-kb:EFlat .
-
-<http://purl.org/ontology/mto/kb/C#> a :Note ;
-    rdfs:label "C#" ;
-    rdfs:comment "C# Named Note" .
-
-<http://purl.org/ontology/mto/kb/C##> a :Note ;
-    rdfs:label "C##" ;
-    rdfs:comment "C## Named Note" .
-
-mto-kb:C- a :Note ;
-    rdfs:label "Cb" ;
-    rdfs:comment "Cb Named Note" .
-
-mto-kb:C-- a :Note ;
-    rdfs:label "Cbb" ;
-    rdfs:comment "Cbb Named Note" .
-
-mto-kb:CFlat :hasAugmentedFifthInterval mto-kb:G ;
-    :hasAugmentedFourthInterval mto-kb:F ;
-    :hasAugmentedSecondInterval mto-kb:D ;
-    :hasAugmentedSeventhInterval mto-kb:B ;
-    :hasAugmentedSixthInterval mto-kb:A ;
-    :hasAugmentedThirdInterval mto-kb:E ;
-    :hasAugmentedUnisonInterval mto-kb:C ;
-    :hasDiminishedFifthInterval mto-kb:F ;
-    :hasDiminishedFourthInterval mto-kb:EFlat ;
-    :hasDiminishedOctaveInterval mto-kb:BFlat ;
-    :hasDiminishedSecondInterval mto-kb:B ;
-    :hasDiminishedSeventhInterval mto-kb:GSharp ;
-    :hasDiminishedSixthInterval mto-kb:FSharp ;
-    :hasDiminishedThirdInterval mto-kb:CSharp ;
-    :hasHalfStep mto-kb:C ;
-    :hasMajorSecondInterval mto-kb:CSharp ;
-    :hasMajorSeventhInterval mto-kb:BFlat ;
-    :hasMajorSixthInterval mto-kb:GSharp ;
-    :hasMajorThirdInterval mto-kb:EFlat ;
-    :hasMinorSecondInterval mto-kb:C ;
-    :hasMinorSeventhInterval mto-kb:A ;
-    :hasMinorSixthInterval mto-kb:G ;
-    :hasMinorThirdInterval mto-kb:D ;
-    :hasPerfectFifthInterval mto-kb:FSharp ;
-    :hasPerfectFourthInterval mto-kb:E ;
-    :hasPerfectOctaveInterval mto-kb:B ;
-    :hasPerfectUnisonInterval mto-kb:B ;
-    :hasSemitone mto-kb:C ;
-    :hasTritone mto-kb:F ;
-    :hasWholeStep mto-kb:CSharp ;
-    :hasWholeTone mto-kb:CSharp .
-
-mto-kb:CFlatFlat :hasAugmentedFifthInterval mto-kb:FSharp ;
-    :hasAugmentedFourthInterval mto-kb:E ;
-    :hasAugmentedSecondInterval mto-kb:CSharp ;
-    :hasAugmentedSeventhInterval mto-kb:BFlat ;
-    :hasAugmentedSixthInterval mto-kb:GSharp ;
-    :hasAugmentedThirdInterval mto-kb:EFlat ;
-    :hasAugmentedUnisonInterval mto-kb:B ;
-    :hasDiminishedFifthInterval mto-kb:E ;
-    :hasDiminishedFourthInterval mto-kb:D ;
-    :hasDiminishedOctaveInterval mto-kb:A ;
-    :hasDiminishedSecondInterval mto-kb:BFlat ;
-    :hasDiminishedSeventhInterval mto-kb:G ;
-    :hasDiminishedSixthInterval mto-kb:F ;
-    :hasDiminishedThirdInterval mto-kb:C ;
-    :hasHalfStep mto-kb:B ;
-    :hasMajorSecondInterval mto-kb:C ;
-    :hasMajorSeventhInterval mto-kb:A ;
-    :hasMajorSixthInterval mto-kb:G ;
-    :hasMajorThirdInterval mto-kb:D ;
-    :hasMinorSecondInterval mto-kb:B ;
-    :hasMinorSeventhInterval mto-kb:GSharp ;
-    :hasMinorSixthInterval mto-kb:FSharp ;
-    :hasMinorThirdInterval mto-kb:CSharp ;
-    :hasPerfectFifthInterval mto-kb:F ;
-    :hasPerfectFourthInterval mto-kb:EFlat ;
-    :hasPerfectOctaveInterval mto-kb:BFlat ;
-    :hasPerfectUnisonInterval mto-kb:BFlat ;
-    :hasSemitone mto-kb:B ;
-    :hasTritone mto-kb:E ;
-    :hasWholeStep mto-kb:C ;
-    :hasWholeTone mto-kb:C .
-
-mto-kb:CSharpSharp :hasAugmentedFifthInterval mto-kb:BFlat ;
-    :hasAugmentedFourthInterval mto-kb:GSharp ;
-    :hasAugmentedSecondInterval mto-kb:F ;
-    :hasAugmentedSeventhInterval mto-kb:D ;
-    :hasAugmentedSixthInterval mto-kb:C ;
-    :hasAugmentedThirdInterval mto-kb:G ;
-    :hasAugmentedUnisonInterval mto-kb:EFlat ;
-    :hasDiminishedFifthInterval mto-kb:GSharp ;
-    :hasDiminishedFourthInterval mto-kb:FSharp ;
-    :hasDiminishedOctaveInterval mto-kb:CSharp ;
-    :hasDiminishedSecondInterval mto-kb:D ;
-    :hasDiminishedSeventhInterval mto-kb:B ;
-    :hasDiminishedSixthInterval mto-kb:A ;
-    :hasDiminishedThirdInterval mto-kb:E ;
-    :hasHalfStep mto-kb:EFlat ;
-    :hasMajorSecondInterval mto-kb:E ;
-    :hasMajorSeventhInterval mto-kb:CSharp ;
-    :hasMajorSixthInterval mto-kb:B ;
-    :hasMajorThirdInterval mto-kb:FSharp ;
-    :hasMinorSecondInterval mto-kb:EFlat ;
-    :hasMinorSeventhInterval mto-kb:C ;
-    :hasMinorSixthInterval mto-kb:BFlat ;
-    :hasMinorThirdInterval mto-kb:F ;
-    :hasPerfectFifthInterval mto-kb:A ;
-    :hasPerfectFourthInterval mto-kb:G ;
-    :hasPerfectOctaveInterval mto-kb:D ;
-    :hasPerfectUnisonInterval mto-kb:D ;
-    :hasSemitone mto-kb:EFlat ;
-    :hasTritone mto-kb:GSharp ;
-    :hasWholeStep mto-kb:E ;
-    :hasWholeTone mto-kb:E .
-
-<http://purl.org/ontology/mto/kb/D#> a :Note ;
-    rdfs:label "D#" ;
-    rdfs:comment "D# Named Note" .
-
-<http://purl.org/ontology/mto/kb/D##> a :Note ;
-    rdfs:label "D##" ;
-    rdfs:comment "D## Named Note" .
-
-mto-kb:D- a :Note ;
-    rdfs:label "Db" ;
-    rdfs:comment "Db Named Note" .
-
-mto-kb:D-- a :Note ;
-    rdfs:label "Dbb" ;
-    rdfs:comment "Dbb Named Note" .
-
-mto-kb:DFlat a :Note ;
-    rdfs:label "Db"^^xsd:string ;
+mto-kb:BDoubleSharp a :Note ;
+    rdfs:label "B##" ;
     :hasAugmentedFifthInterval mto-kb:A ;
     :hasAugmentedFourthInterval mto-kb:G ;
     :hasAugmentedSecondInterval mto-kb:E ;
@@ -1308,10 +1097,11 @@ mto-kb:DFlat a :Note ;
     :hasTritone mto-kb:G ;
     :hasWholeStep mto-kb:EFlat ;
     :hasWholeTone mto-kb:EFlat ;
-    rdfs:comment "Db Named Note"^^xsd:string ;
-    owl:sameAs :CSharp .
+    rdfs:comment "B## Named Note" .
 
-mto-kb:DFlatFlat :hasAugmentedFifthInterval mto-kb:GSharp ;
+mto-kb:BSharp a :Note ;
+    rdfs:label "B#" ;
+    :hasAugmentedFifthInterval mto-kb:GSharp ;
     :hasAugmentedFourthInterval mto-kb:FSharp ;
     :hasAugmentedSecondInterval mto-kb:EFlat ;
     :hasAugmentedSeventhInterval mto-kb:C ;
@@ -1341,10 +1131,225 @@ mto-kb:DFlatFlat :hasAugmentedFifthInterval mto-kb:GSharp ;
     :hasSemitone mto-kb:CSharp ;
     :hasTritone mto-kb:FSharp ;
     :hasWholeStep mto-kb:D ;
-    :hasWholeTone mto-kb:D .
+    :hasWholeTone mto-kb:D ;
+    rdfs:comment "B# Named Note" .
+
+mto-kb:CDoubleFlat a :Note ;
+    rdfs:label "Cbb" ;
+    :hasAugmentedFifthInterval mto-kb:FSharp ;
+    :hasAugmentedFourthInterval mto-kb:E ;
+    :hasAugmentedSecondInterval mto-kb:CSharp ;
+    :hasAugmentedSeventhInterval mto-kb:BFlat ;
+    :hasAugmentedSixthInterval mto-kb:GSharp ;
+    :hasAugmentedThirdInterval mto-kb:EFlat ;
+    :hasAugmentedUnisonInterval mto-kb:B ;
+    :hasDiminishedFifthInterval mto-kb:E ;
+    :hasDiminishedFourthInterval mto-kb:D ;
+    :hasDiminishedOctaveInterval mto-kb:A ;
+    :hasDiminishedSecondInterval mto-kb:BFlat ;
+    :hasDiminishedSeventhInterval mto-kb:G ;
+    :hasDiminishedSixthInterval mto-kb:F ;
+    :hasDiminishedThirdInterval mto-kb:C ;
+    :hasHalfStep mto-kb:B ;
+    :hasMajorSecondInterval mto-kb:C ;
+    :hasMajorSeventhInterval mto-kb:A ;
+    :hasMajorSixthInterval mto-kb:G ;
+    :hasMajorThirdInterval mto-kb:D ;
+    :hasMinorSecondInterval mto-kb:B ;
+    :hasMinorSeventhInterval mto-kb:GSharp ;
+    :hasMinorSixthInterval mto-kb:FSharp ;
+    :hasMinorThirdInterval mto-kb:CSharp ;
+    :hasPerfectFifthInterval mto-kb:F ;
+    :hasPerfectFourthInterval mto-kb:EFlat ;
+    :hasPerfectOctaveInterval mto-kb:BFlat ;
+    :hasPerfectUnisonInterval mto-kb:BFlat ;
+    :hasSemitone mto-kb:B ;
+    :hasTritone mto-kb:E ;
+    :hasWholeStep mto-kb:C ;
+    :hasWholeTone mto-kb:C ;
+    rdfs:comment "Cbb Named Note" .
+
+mto-kb:CDoubleSharp a :Note ;
+    rdfs:label "C##" ;
+    :hasAugmentedFifthInterval mto-kb:BFlat ;
+    :hasAugmentedFourthInterval mto-kb:GSharp ;
+    :hasAugmentedSecondInterval mto-kb:F ;
+    :hasAugmentedSeventhInterval mto-kb:D ;
+    :hasAugmentedSixthInterval mto-kb:C ;
+    :hasAugmentedThirdInterval mto-kb:G ;
+    :hasAugmentedUnisonInterval mto-kb:EFlat ;
+    :hasDiminishedFifthInterval mto-kb:GSharp ;
+    :hasDiminishedFourthInterval mto-kb:FSharp ;
+    :hasDiminishedOctaveInterval mto-kb:CSharp ;
+    :hasDiminishedSecondInterval mto-kb:D ;
+    :hasDiminishedSeventhInterval mto-kb:B ;
+    :hasDiminishedSixthInterval mto-kb:A ;
+    :hasDiminishedThirdInterval mto-kb:E ;
+    :hasHalfStep mto-kb:EFlat ;
+    :hasMajorSecondInterval mto-kb:E ;
+    :hasMajorSeventhInterval mto-kb:CSharp ;
+    :hasMajorSixthInterval mto-kb:B ;
+    :hasMajorThirdInterval mto-kb:FSharp ;
+    :hasMinorSecondInterval mto-kb:EFlat ;
+    :hasMinorSeventhInterval mto-kb:C ;
+    :hasMinorSixthInterval mto-kb:BFlat ;
+    :hasMinorThirdInterval mto-kb:F ;
+    :hasPerfectFifthInterval mto-kb:A ;
+    :hasPerfectFourthInterval mto-kb:G ;
+    :hasPerfectOctaveInterval mto-kb:D ;
+    :hasPerfectUnisonInterval mto-kb:D ;
+    :hasSemitone mto-kb:EFlat ;
+    :hasTritone mto-kb:GSharp ;
+    :hasWholeStep mto-kb:E ;
+    :hasWholeTone mto-kb:E ;
+    rdfs:comment "C## Named Note" .
+
+mto-kb:CFlat a :Note ;
+    rdfs:label "Cb" ;
+    :hasAugmentedFifthInterval mto-kb:G ;
+    :hasAugmentedFourthInterval mto-kb:F ;
+    :hasAugmentedSecondInterval mto-kb:D ;
+    :hasAugmentedSeventhInterval mto-kb:B ;
+    :hasAugmentedSixthInterval mto-kb:A ;
+    :hasAugmentedThirdInterval mto-kb:E ;
+    :hasAugmentedUnisonInterval mto-kb:C ;
+    :hasDiminishedFifthInterval mto-kb:F ;
+    :hasDiminishedFourthInterval mto-kb:EFlat ;
+    :hasDiminishedOctaveInterval mto-kb:BFlat ;
+    :hasDiminishedSecondInterval mto-kb:B ;
+    :hasDiminishedSeventhInterval mto-kb:GSharp ;
+    :hasDiminishedSixthInterval mto-kb:FSharp ;
+    :hasDiminishedThirdInterval mto-kb:CSharp ;
+    :hasHalfStep mto-kb:C ;
+    :hasMajorSecondInterval mto-kb:CSharp ;
+    :hasMajorSeventhInterval mto-kb:BFlat ;
+    :hasMajorSixthInterval mto-kb:GSharp ;
+    :hasMajorThirdInterval mto-kb:EFlat ;
+    :hasMinorSecondInterval mto-kb:C ;
+    :hasMinorSeventhInterval mto-kb:A ;
+    :hasMinorSixthInterval mto-kb:G ;
+    :hasMinorThirdInterval mto-kb:D ;
+    :hasPerfectFifthInterval mto-kb:FSharp ;
+    :hasPerfectFourthInterval mto-kb:E ;
+    :hasPerfectOctaveInterval mto-kb:B ;
+    :hasPerfectUnisonInterval mto-kb:B ;
+    :hasSemitone mto-kb:C ;
+    :hasTritone mto-kb:F ;
+    :hasWholeStep mto-kb:CSharp ;
+    :hasWholeTone mto-kb:CSharp ;
+    rdfs:comment "Cb Named Note" .
+
+mto-kb:DDoubleFlat a :Note ;
+    rdfs:label "Dbb" ;
+    :hasAugmentedFifthInterval mto-kb:GSharp ;
+    :hasAugmentedFourthInterval mto-kb:FSharp ;
+    :hasAugmentedSecondInterval mto-kb:EFlat ;
+    :hasAugmentedSeventhInterval mto-kb:C ;
+    :hasAugmentedSixthInterval mto-kb:BFlat ;
+    :hasAugmentedThirdInterval mto-kb:F ;
+    :hasAugmentedUnisonInterval mto-kb:CSharp ;
+    :hasDiminishedFifthInterval mto-kb:FSharp ;
+    :hasDiminishedFourthInterval mto-kb:E ;
+    :hasDiminishedOctaveInterval mto-kb:B ;
+    :hasDiminishedSecondInterval mto-kb:C ;
+    :hasDiminishedSeventhInterval mto-kb:A ;
+    :hasDiminishedSixthInterval mto-kb:G ;
+    :hasDiminishedThirdInterval mto-kb:D ;
+    :hasHalfStep mto-kb:CSharp ;
+    :hasMajorSecondInterval mto-kb:D ;
+    :hasMajorSeventhInterval mto-kb:B ;
+    :hasMajorSixthInterval mto-kb:A ;
+    :hasMajorThirdInterval mto-kb:E ;
+    :hasMinorSecondInterval mto-kb:CSharp ;
+    :hasMinorSeventhInterval mto-kb:BFlat ;
+    :hasMinorSixthInterval mto-kb:GSharp ;
+    :hasMinorThirdInterval mto-kb:EFlat ;
+    :hasPerfectFifthInterval mto-kb:G ;
+    :hasPerfectFourthInterval mto-kb:F ;
+    :hasPerfectOctaveInterval mto-kb:C ;
+    :hasPerfectUnisonInterval mto-kb:C ;
+    :hasSemitone mto-kb:CSharp ;
+    :hasTritone mto-kb:FSharp ;
+    :hasWholeStep mto-kb:D ;
+    :hasWholeTone mto-kb:D ;
+    rdfs:comment "Dbb Named Note" .
+
+mto-kb:DDoubleSharp a :Note ;
+    rdfs:label "D##" ;
+    :hasAugmentedFifthInterval mto-kb:C ;
+    :hasAugmentedFourthInterval mto-kb:BFlat ;
+    :hasAugmentedSecondInterval mto-kb:G ;
+    :hasAugmentedSeventhInterval mto-kb:E ;
+    :hasAugmentedSixthInterval mto-kb:D ;
+    :hasAugmentedThirdInterval mto-kb:A ;
+    :hasAugmentedUnisonInterval mto-kb:F ;
+    :hasDiminishedFifthInterval mto-kb:BFlat ;
+    :hasDiminishedFourthInterval mto-kb:GSharp ;
+    :hasDiminishedOctaveInterval mto-kb:EFlat ;
+    :hasDiminishedSecondInterval mto-kb:E ;
+    :hasDiminishedSeventhInterval mto-kb:CSharp ;
+    :hasDiminishedSixthInterval mto-kb:B ;
+    :hasDiminishedThirdInterval mto-kb:FSharp ;
+    :hasHalfStep mto-kb:F ;
+    :hasMajorSecondInterval mto-kb:FSharp ;
+    :hasMajorSeventhInterval mto-kb:EFlat ;
+    :hasMajorSixthInterval mto-kb:CSharp ;
+    :hasMajorThirdInterval mto-kb:GSharp ;
+    :hasMinorSecondInterval mto-kb:F ;
+    :hasMinorSeventhInterval mto-kb:D ;
+    :hasMinorSixthInterval mto-kb:C ;
+    :hasMinorThirdInterval mto-kb:G ;
+    :hasPerfectFifthInterval mto-kb:B ;
+    :hasPerfectFourthInterval mto-kb:A ;
+    :hasPerfectOctaveInterval mto-kb:E ;
+    :hasPerfectUnisonInterval mto-kb:E ;
+    :hasSemitone mto-kb:F ;
+    :hasTritone mto-kb:BFlat ;
+    :hasWholeStep mto-kb:FSharp ;
+    :hasWholeTone mto-kb:FSharp ;
+    rdfs:comment "D## Named Note" .
+
+mto-kb:DFlat a :Note ;
+    rdfs:label "Db"^^xsd:string,
+        "Db" ;
+    :hasAugmentedFifthInterval mto-kb:A ;
+    :hasAugmentedFourthInterval mto-kb:G ;
+    :hasAugmentedSecondInterval mto-kb:E ;
+    :hasAugmentedSeventhInterval mto-kb:CSharp ;
+    :hasAugmentedSixthInterval mto-kb:B ;
+    :hasAugmentedThirdInterval mto-kb:FSharp ;
+    :hasAugmentedUnisonInterval mto-kb:D ;
+    :hasDiminishedFifthInterval mto-kb:G ;
+    :hasDiminishedFourthInterval mto-kb:F ;
+    :hasDiminishedOctaveInterval mto-kb:C ;
+    :hasDiminishedSecondInterval mto-kb:CSharp ;
+    :hasDiminishedSeventhInterval mto-kb:BFlat ;
+    :hasDiminishedSixthInterval mto-kb:GSharp ;
+    :hasDiminishedThirdInterval mto-kb:EFlat ;
+    :hasHalfStep mto-kb:D ;
+    :hasMajorSecondInterval mto-kb:EFlat ;
+    :hasMajorSeventhInterval mto-kb:C ;
+    :hasMajorSixthInterval mto-kb:BFlat ;
+    :hasMajorThirdInterval mto-kb:F ;
+    :hasMinorSecondInterval mto-kb:D ;
+    :hasMinorSeventhInterval mto-kb:B ;
+    :hasMinorSixthInterval mto-kb:A ;
+    :hasMinorThirdInterval mto-kb:E ;
+    :hasPerfectFifthInterval mto-kb:GSharp ;
+    :hasPerfectFourthInterval mto-kb:FSharp ;
+    :hasPerfectOctaveInterval mto-kb:CSharp ;
+    :hasPerfectUnisonInterval mto-kb:CSharp ;
+    :hasSemitone mto-kb:D ;
+    :hasTritone mto-kb:G ;
+    :hasWholeStep mto-kb:EFlat ;
+    :hasWholeTone mto-kb:EFlat ;
+    rdfs:comment "Db Named Note"^^xsd:string,
+        "Db Named Note" ;
+    owl:sameAs :CSharp .
 
 mto-kb:DSharp a :Note ;
-    rdfs:label "D#"^^xsd:string ;
+    rdfs:label "D#"^^xsd:string,
+        "D#" ;
     :hasAugmentedFifthInterval mto-kb:B ;
     :hasAugmentedFourthInterval mto-kb:A ;
     :hasAugmentedSecondInterval mto-kb:FSharp ;
@@ -1376,58 +1381,13 @@ mto-kb:DSharp a :Note ;
     :hasTritone mto-kb:A ;
     :hasWholeStep mto-kb:F ;
     :hasWholeTone mto-kb:F ;
-    rdfs:comment "D# Named Note"^^xsd:string ;
+    rdfs:comment "D# Named Note"^^xsd:string,
+        "D# Named Note" ;
     owl:sameAs :EFlat .
 
-mto-kb:DSharpSharp :hasAugmentedFifthInterval mto-kb:C ;
-    :hasAugmentedFourthInterval mto-kb:BFlat ;
-    :hasAugmentedSecondInterval mto-kb:G ;
-    :hasAugmentedSeventhInterval mto-kb:E ;
-    :hasAugmentedSixthInterval mto-kb:D ;
-    :hasAugmentedThirdInterval mto-kb:A ;
-    :hasAugmentedUnisonInterval mto-kb:F ;
-    :hasDiminishedFifthInterval mto-kb:BFlat ;
-    :hasDiminishedFourthInterval mto-kb:GSharp ;
-    :hasDiminishedOctaveInterval mto-kb:EFlat ;
-    :hasDiminishedSecondInterval mto-kb:E ;
-    :hasDiminishedSeventhInterval mto-kb:CSharp ;
-    :hasDiminishedSixthInterval mto-kb:B ;
-    :hasDiminishedThirdInterval mto-kb:FSharp ;
-    :hasHalfStep mto-kb:F ;
-    :hasMajorSecondInterval mto-kb:FSharp ;
-    :hasMajorSeventhInterval mto-kb:EFlat ;
-    :hasMajorSixthInterval mto-kb:CSharp ;
-    :hasMajorThirdInterval mto-kb:GSharp ;
-    :hasMinorSecondInterval mto-kb:F ;
-    :hasMinorSeventhInterval mto-kb:D ;
-    :hasMinorSixthInterval mto-kb:C ;
-    :hasMinorThirdInterval mto-kb:G ;
-    :hasPerfectFifthInterval mto-kb:B ;
-    :hasPerfectFourthInterval mto-kb:A ;
-    :hasPerfectOctaveInterval mto-kb:E ;
-    :hasPerfectUnisonInterval mto-kb:E ;
-    :hasSemitone mto-kb:F ;
-    :hasTritone mto-kb:BFlat ;
-    :hasWholeStep mto-kb:FSharp ;
-    :hasWholeTone mto-kb:FSharp .
-
-<http://purl.org/ontology/mto/kb/E#> a :Note ;
-    rdfs:label "E#" ;
-    rdfs:comment "E# Named Note" .
-
-<http://purl.org/ontology/mto/kb/E##> a :Note ;
-    rdfs:label "E##" ;
-    rdfs:comment "E## Named Note" .
-
-mto-kb:E- a :Note ;
-    rdfs:label "Eb" ;
-    rdfs:comment "Eb Named Note" .
-
-mto-kb:E-- a :Note ;
+mto-kb:EDoubleFlat a :Note ;
     rdfs:label "Ebb" ;
-    rdfs:comment "Ebb Named Note" .
-
-mto-kb:EFlatFlat :hasAugmentedFifthInterval mto-kb:BFlat ;
+    :hasAugmentedFifthInterval mto-kb:BFlat ;
     :hasAugmentedFourthInterval mto-kb:GSharp ;
     :hasAugmentedSecondInterval mto-kb:F ;
     :hasAugmentedSeventhInterval mto-kb:D ;
@@ -1457,202 +1417,11 @@ mto-kb:EFlatFlat :hasAugmentedFifthInterval mto-kb:BFlat ;
     :hasSemitone mto-kb:EFlat ;
     :hasTritone mto-kb:GSharp ;
     :hasWholeStep mto-kb:E ;
-    :hasWholeTone mto-kb:E .
+    :hasWholeTone mto-kb:E ;
+    rdfs:comment "Ebb Named Note" .
 
-mto-kb:ESharp :hasAugmentedFifthInterval mto-kb:CSharp ;
-    :hasAugmentedFourthInterval mto-kb:B ;
-    :hasAugmentedSecondInterval mto-kb:GSharp ;
-    :hasAugmentedSeventhInterval mto-kb:F ;
-    :hasAugmentedSixthInterval mto-kb:EFlat ;
-    :hasAugmentedThirdInterval mto-kb:BFlat ;
-    :hasAugmentedUnisonInterval mto-kb:FSharp ;
-    :hasDiminishedFifthInterval mto-kb:B ;
-    :hasDiminishedFourthInterval mto-kb:A ;
-    :hasDiminishedOctaveInterval mto-kb:E ;
-    :hasDiminishedSecondInterval mto-kb:F ;
-    :hasDiminishedSeventhInterval mto-kb:D ;
-    :hasDiminishedSixthInterval mto-kb:C ;
-    :hasDiminishedThirdInterval mto-kb:G ;
-    :hasHalfStep mto-kb:FSharp ;
-    :hasMajorSecondInterval mto-kb:G ;
-    :hasMajorSeventhInterval mto-kb:E ;
-    :hasMajorSixthInterval mto-kb:D ;
-    :hasMajorThirdInterval mto-kb:A ;
-    :hasMinorSecondInterval mto-kb:FSharp ;
-    :hasMinorSeventhInterval mto-kb:EFlat ;
-    :hasMinorSixthInterval mto-kb:CSharp ;
-    :hasMinorThirdInterval mto-kb:GSharp ;
-    :hasPerfectFifthInterval mto-kb:C ;
-    :hasPerfectFourthInterval mto-kb:BFlat ;
-    :hasPerfectOctaveInterval mto-kb:F ;
-    :hasPerfectUnisonInterval mto-kb:F ;
-    :hasSemitone mto-kb:FSharp ;
-    :hasTritone mto-kb:B ;
-    :hasWholeStep mto-kb:G ;
-    :hasWholeTone mto-kb:G .
-
-mto-kb:ESharpSharp :hasAugmentedFifthInterval mto-kb:D ;
-    :hasAugmentedFourthInterval mto-kb:C ;
-    :hasAugmentedSecondInterval mto-kb:A ;
-    :hasAugmentedSeventhInterval mto-kb:FSharp ;
-    :hasAugmentedSixthInterval mto-kb:E ;
-    :hasAugmentedThirdInterval mto-kb:B ;
-    :hasAugmentedUnisonInterval mto-kb:G ;
-    :hasDiminishedFifthInterval mto-kb:C ;
-    :hasDiminishedFourthInterval mto-kb:BFlat ;
-    :hasDiminishedOctaveInterval mto-kb:F ;
-    :hasDiminishedSecondInterval mto-kb:FSharp ;
-    :hasDiminishedSeventhInterval mto-kb:EFlat ;
-    :hasDiminishedSixthInterval mto-kb:CSharp ;
-    :hasDiminishedThirdInterval mto-kb:GSharp ;
-    :hasHalfStep mto-kb:G ;
-    :hasMajorSecondInterval mto-kb:GSharp ;
-    :hasMajorSeventhInterval mto-kb:F ;
-    :hasMajorSixthInterval mto-kb:EFlat ;
-    :hasMajorThirdInterval mto-kb:BFlat ;
-    :hasMinorSecondInterval mto-kb:G ;
-    :hasMinorSeventhInterval mto-kb:E ;
-    :hasMinorSixthInterval mto-kb:D ;
-    :hasMinorThirdInterval mto-kb:A ;
-    :hasPerfectFifthInterval mto-kb:CSharp ;
-    :hasPerfectFourthInterval mto-kb:B ;
-    :hasPerfectOctaveInterval mto-kb:FSharp ;
-    :hasPerfectUnisonInterval mto-kb:FSharp ;
-    :hasSemitone mto-kb:G ;
-    :hasTritone mto-kb:C ;
-    :hasWholeStep mto-kb:GSharp ;
-    :hasWholeTone mto-kb:GSharp .
-
-<http://purl.org/ontology/mto/kb/F#> a :Note ;
-    rdfs:label "F#" ;
-    rdfs:comment "F# Named Note" .
-
-<http://purl.org/ontology/mto/kb/F##> a :Note ;
-    rdfs:label "F##" ;
-    rdfs:comment "F## Named Note" .
-
-mto-kb:F- a :Note ;
-    rdfs:label "Fb" ;
-    rdfs:comment "Fb Named Note" .
-
-mto-kb:F-- a :Note ;
-    rdfs:label "Fbb" ;
-    rdfs:comment "Fbb Named Note" .
-
-mto-kb:FFlat :hasAugmentedFifthInterval mto-kb:C ;
-    :hasAugmentedFourthInterval mto-kb:BFlat ;
-    :hasAugmentedSecondInterval mto-kb:G ;
-    :hasAugmentedSeventhInterval mto-kb:E ;
-    :hasAugmentedSixthInterval mto-kb:D ;
-    :hasAugmentedThirdInterval mto-kb:A ;
-    :hasAugmentedUnisonInterval mto-kb:F ;
-    :hasDiminishedFifthInterval mto-kb:BFlat ;
-    :hasDiminishedFourthInterval mto-kb:GSharp ;
-    :hasDiminishedOctaveInterval mto-kb:EFlat ;
-    :hasDiminishedSecondInterval mto-kb:E ;
-    :hasDiminishedSeventhInterval mto-kb:CSharp ;
-    :hasDiminishedSixthInterval mto-kb:B ;
-    :hasDiminishedThirdInterval mto-kb:FSharp ;
-    :hasHalfStep mto-kb:F ;
-    :hasMajorSecondInterval mto-kb:FSharp ;
-    :hasMajorSeventhInterval mto-kb:EFlat ;
-    :hasMajorSixthInterval mto-kb:CSharp ;
-    :hasMajorThirdInterval mto-kb:GSharp ;
-    :hasMinorSecondInterval mto-kb:F ;
-    :hasMinorSeventhInterval mto-kb:D ;
-    :hasMinorSixthInterval mto-kb:C ;
-    :hasMinorThirdInterval mto-kb:G ;
-    :hasPerfectFifthInterval mto-kb:B ;
-    :hasPerfectFourthInterval mto-kb:A ;
-    :hasPerfectOctaveInterval mto-kb:E ;
-    :hasPerfectUnisonInterval mto-kb:E ;
-    :hasSemitone mto-kb:F ;
-    :hasTritone mto-kb:BFlat ;
-    :hasWholeStep mto-kb:FSharp ;
-    :hasWholeTone mto-kb:FSharp .
-
-mto-kb:FFlatFlat :hasAugmentedFifthInterval mto-kb:B ;
-    :hasAugmentedFourthInterval mto-kb:A ;
-    :hasAugmentedSecondInterval mto-kb:FSharp ;
-    :hasAugmentedSeventhInterval mto-kb:EFlat ;
-    :hasAugmentedSixthInterval mto-kb:CSharp ;
-    :hasAugmentedThirdInterval mto-kb:GSharp ;
-    :hasAugmentedUnisonInterval mto-kb:E ;
-    :hasDiminishedFifthInterval mto-kb:A ;
-    :hasDiminishedFourthInterval mto-kb:G ;
-    :hasDiminishedOctaveInterval mto-kb:D ;
-    :hasDiminishedSecondInterval mto-kb:EFlat ;
-    :hasDiminishedSeventhInterval mto-kb:C ;
-    :hasDiminishedSixthInterval mto-kb:BFlat ;
-    :hasDiminishedThirdInterval mto-kb:F ;
-    :hasHalfStep mto-kb:E ;
-    :hasMajorSecondInterval mto-kb:F ;
-    :hasMajorSeventhInterval mto-kb:D ;
-    :hasMajorSixthInterval mto-kb:C ;
-    :hasMajorThirdInterval mto-kb:G ;
-    :hasMinorSecondInterval mto-kb:E ;
-    :hasMinorSeventhInterval mto-kb:CSharp ;
-    :hasMinorSixthInterval mto-kb:B ;
-    :hasMinorThirdInterval mto-kb:FSharp ;
-    :hasPerfectFifthInterval mto-kb:BFlat ;
-    :hasPerfectFourthInterval mto-kb:GSharp ;
-    :hasPerfectOctaveInterval mto-kb:EFlat ;
-    :hasPerfectUnisonInterval mto-kb:EFlat ;
-    :hasSemitone mto-kb:E ;
-    :hasTritone mto-kb:A ;
-    :hasWholeStep mto-kb:F ;
-    :hasWholeTone mto-kb:F .
-
-mto-kb:FSharpSharp :hasAugmentedFifthInterval mto-kb:EFlat ;
-    :hasAugmentedFourthInterval mto-kb:CSharp ;
-    :hasAugmentedSecondInterval mto-kb:BFlat ;
-    :hasAugmentedSeventhInterval mto-kb:G ;
-    :hasAugmentedSixthInterval mto-kb:F ;
-    :hasAugmentedThirdInterval mto-kb:C ;
-    :hasAugmentedUnisonInterval mto-kb:GSharp ;
-    :hasDiminishedFifthInterval mto-kb:CSharp ;
-    :hasDiminishedFourthInterval mto-kb:B ;
-    :hasDiminishedOctaveInterval mto-kb:FSharp ;
-    :hasDiminishedSecondInterval mto-kb:G ;
-    :hasDiminishedSeventhInterval mto-kb:E ;
-    :hasDiminishedSixthInterval mto-kb:D ;
-    :hasDiminishedThirdInterval mto-kb:A ;
-    :hasHalfStep mto-kb:GSharp ;
-    :hasMajorSecondInterval mto-kb:A ;
-    :hasMajorSeventhInterval mto-kb:FSharp ;
-    :hasMajorSixthInterval mto-kb:E ;
-    :hasMajorThirdInterval mto-kb:B ;
-    :hasMinorSecondInterval mto-kb:GSharp ;
-    :hasMinorSeventhInterval mto-kb:F ;
-    :hasMinorSixthInterval mto-kb:EFlat ;
-    :hasMinorThirdInterval mto-kb:BFlat ;
-    :hasPerfectFifthInterval mto-kb:D ;
-    :hasPerfectFourthInterval mto-kb:C ;
-    :hasPerfectOctaveInterval mto-kb:G ;
-    :hasPerfectUnisonInterval mto-kb:G ;
-    :hasSemitone mto-kb:GSharp ;
-    :hasTritone mto-kb:CSharp ;
-    :hasWholeStep mto-kb:A ;
-    :hasWholeTone mto-kb:A .
-
-<http://purl.org/ontology/mto/kb/G#> a :Note ;
-    rdfs:label "G#" ;
-    rdfs:comment "G# Named Note" .
-
-<http://purl.org/ontology/mto/kb/G##> a :Note ;
-    rdfs:label "G##" ;
-    rdfs:comment "G## Named Note" .
-
-mto-kb:G- a :Note ;
-    rdfs:label "Gb" ;
-    rdfs:comment "Gb Named Note" .
-
-mto-kb:G-- a :Note ;
-    rdfs:label "Gbb" ;
-    rdfs:comment "Gbb Named Note" .
-
-mto-kb:GFlat a :Note ;
-    rdfs:label "Gb"^^xsd:string ;
+mto-kb:EDoubleSharp a :Note ;
+    rdfs:label "E##" ;
     :hasAugmentedFifthInterval mto-kb:D ;
     :hasAugmentedFourthInterval mto-kb:C ;
     :hasAugmentedSecondInterval mto-kb:A ;
@@ -1684,10 +1453,11 @@ mto-kb:GFlat a :Note ;
     :hasTritone mto-kb:C ;
     :hasWholeStep mto-kb:GSharp ;
     :hasWholeTone mto-kb:GSharp ;
-    rdfs:comment "Gb Named Note"^^xsd:string ;
-    owl:sameAs :FSharp .
+    rdfs:comment "E## Named Note" .
 
-mto-kb:GFlatFlat :hasAugmentedFifthInterval mto-kb:CSharp ;
+mto-kb:ESharp a :Note ;
+    rdfs:label "E#" ;
+    :hasAugmentedFifthInterval mto-kb:CSharp ;
     :hasAugmentedFourthInterval mto-kb:B ;
     :hasAugmentedSecondInterval mto-kb:GSharp ;
     :hasAugmentedSeventhInterval mto-kb:F ;
@@ -1717,9 +1487,152 @@ mto-kb:GFlatFlat :hasAugmentedFifthInterval mto-kb:CSharp ;
     :hasSemitone mto-kb:FSharp ;
     :hasTritone mto-kb:B ;
     :hasWholeStep mto-kb:G ;
-    :hasWholeTone mto-kb:G .
+    :hasWholeTone mto-kb:G ;
+    rdfs:comment "E# Named Note" .
 
-mto-kb:GSharpSharp :hasAugmentedFifthInterval mto-kb:F ;
+mto-kb:FDoubleFlat a :Note ;
+    rdfs:label "Fbb" ;
+    :hasAugmentedFifthInterval mto-kb:B ;
+    :hasAugmentedFourthInterval mto-kb:A ;
+    :hasAugmentedSecondInterval mto-kb:FSharp ;
+    :hasAugmentedSeventhInterval mto-kb:EFlat ;
+    :hasAugmentedSixthInterval mto-kb:CSharp ;
+    :hasAugmentedThirdInterval mto-kb:GSharp ;
+    :hasAugmentedUnisonInterval mto-kb:E ;
+    :hasDiminishedFifthInterval mto-kb:A ;
+    :hasDiminishedFourthInterval mto-kb:G ;
+    :hasDiminishedOctaveInterval mto-kb:D ;
+    :hasDiminishedSecondInterval mto-kb:EFlat ;
+    :hasDiminishedSeventhInterval mto-kb:C ;
+    :hasDiminishedSixthInterval mto-kb:BFlat ;
+    :hasDiminishedThirdInterval mto-kb:F ;
+    :hasHalfStep mto-kb:E ;
+    :hasMajorSecondInterval mto-kb:F ;
+    :hasMajorSeventhInterval mto-kb:D ;
+    :hasMajorSixthInterval mto-kb:C ;
+    :hasMajorThirdInterval mto-kb:G ;
+    :hasMinorSecondInterval mto-kb:E ;
+    :hasMinorSeventhInterval mto-kb:CSharp ;
+    :hasMinorSixthInterval mto-kb:B ;
+    :hasMinorThirdInterval mto-kb:FSharp ;
+    :hasPerfectFifthInterval mto-kb:BFlat ;
+    :hasPerfectFourthInterval mto-kb:GSharp ;
+    :hasPerfectOctaveInterval mto-kb:EFlat ;
+    :hasPerfectUnisonInterval mto-kb:EFlat ;
+    :hasSemitone mto-kb:E ;
+    :hasTritone mto-kb:A ;
+    :hasWholeStep mto-kb:F ;
+    :hasWholeTone mto-kb:F ;
+    rdfs:comment "Fbb Named Note" .
+
+mto-kb:FDoubleSharp a :Note ;
+    rdfs:label "F##" ;
+    :hasAugmentedFifthInterval mto-kb:EFlat ;
+    :hasAugmentedFourthInterval mto-kb:CSharp ;
+    :hasAugmentedSecondInterval mto-kb:BFlat ;
+    :hasAugmentedSeventhInterval mto-kb:G ;
+    :hasAugmentedSixthInterval mto-kb:F ;
+    :hasAugmentedThirdInterval mto-kb:C ;
+    :hasAugmentedUnisonInterval mto-kb:GSharp ;
+    :hasDiminishedFifthInterval mto-kb:CSharp ;
+    :hasDiminishedFourthInterval mto-kb:B ;
+    :hasDiminishedOctaveInterval mto-kb:FSharp ;
+    :hasDiminishedSecondInterval mto-kb:G ;
+    :hasDiminishedSeventhInterval mto-kb:E ;
+    :hasDiminishedSixthInterval mto-kb:D ;
+    :hasDiminishedThirdInterval mto-kb:A ;
+    :hasHalfStep mto-kb:GSharp ;
+    :hasMajorSecondInterval mto-kb:A ;
+    :hasMajorSeventhInterval mto-kb:FSharp ;
+    :hasMajorSixthInterval mto-kb:E ;
+    :hasMajorThirdInterval mto-kb:B ;
+    :hasMinorSecondInterval mto-kb:GSharp ;
+    :hasMinorSeventhInterval mto-kb:F ;
+    :hasMinorSixthInterval mto-kb:EFlat ;
+    :hasMinorThirdInterval mto-kb:BFlat ;
+    :hasPerfectFifthInterval mto-kb:D ;
+    :hasPerfectFourthInterval mto-kb:C ;
+    :hasPerfectOctaveInterval mto-kb:G ;
+    :hasPerfectUnisonInterval mto-kb:G ;
+    :hasSemitone mto-kb:GSharp ;
+    :hasTritone mto-kb:CSharp ;
+    :hasWholeStep mto-kb:A ;
+    :hasWholeTone mto-kb:A ;
+    rdfs:comment "F## Named Note" .
+
+mto-kb:FFlat a :Note ;
+    rdfs:label "Fb" ;
+    :hasAugmentedFifthInterval mto-kb:C ;
+    :hasAugmentedFourthInterval mto-kb:BFlat ;
+    :hasAugmentedSecondInterval mto-kb:G ;
+    :hasAugmentedSeventhInterval mto-kb:E ;
+    :hasAugmentedSixthInterval mto-kb:D ;
+    :hasAugmentedThirdInterval mto-kb:A ;
+    :hasAugmentedUnisonInterval mto-kb:F ;
+    :hasDiminishedFifthInterval mto-kb:BFlat ;
+    :hasDiminishedFourthInterval mto-kb:GSharp ;
+    :hasDiminishedOctaveInterval mto-kb:EFlat ;
+    :hasDiminishedSecondInterval mto-kb:E ;
+    :hasDiminishedSeventhInterval mto-kb:CSharp ;
+    :hasDiminishedSixthInterval mto-kb:B ;
+    :hasDiminishedThirdInterval mto-kb:FSharp ;
+    :hasHalfStep mto-kb:F ;
+    :hasMajorSecondInterval mto-kb:FSharp ;
+    :hasMajorSeventhInterval mto-kb:EFlat ;
+    :hasMajorSixthInterval mto-kb:CSharp ;
+    :hasMajorThirdInterval mto-kb:GSharp ;
+    :hasMinorSecondInterval mto-kb:F ;
+    :hasMinorSeventhInterval mto-kb:D ;
+    :hasMinorSixthInterval mto-kb:C ;
+    :hasMinorThirdInterval mto-kb:G ;
+    :hasPerfectFifthInterval mto-kb:B ;
+    :hasPerfectFourthInterval mto-kb:A ;
+    :hasPerfectOctaveInterval mto-kb:E ;
+    :hasPerfectUnisonInterval mto-kb:E ;
+    :hasSemitone mto-kb:F ;
+    :hasTritone mto-kb:BFlat ;
+    :hasWholeStep mto-kb:FSharp ;
+    :hasWholeTone mto-kb:FSharp ;
+    rdfs:comment "Fb Named Note" .
+
+mto-kb:GDoubleFlat a :Note ;
+    rdfs:label "Gbb" ;
+    :hasAugmentedFifthInterval mto-kb:CSharp ;
+    :hasAugmentedFourthInterval mto-kb:B ;
+    :hasAugmentedSecondInterval mto-kb:GSharp ;
+    :hasAugmentedSeventhInterval mto-kb:F ;
+    :hasAugmentedSixthInterval mto-kb:EFlat ;
+    :hasAugmentedThirdInterval mto-kb:BFlat ;
+    :hasAugmentedUnisonInterval mto-kb:FSharp ;
+    :hasDiminishedFifthInterval mto-kb:B ;
+    :hasDiminishedFourthInterval mto-kb:A ;
+    :hasDiminishedOctaveInterval mto-kb:E ;
+    :hasDiminishedSecondInterval mto-kb:F ;
+    :hasDiminishedSeventhInterval mto-kb:D ;
+    :hasDiminishedSixthInterval mto-kb:C ;
+    :hasDiminishedThirdInterval mto-kb:G ;
+    :hasHalfStep mto-kb:FSharp ;
+    :hasMajorSecondInterval mto-kb:G ;
+    :hasMajorSeventhInterval mto-kb:E ;
+    :hasMajorSixthInterval mto-kb:D ;
+    :hasMajorThirdInterval mto-kb:A ;
+    :hasMinorSecondInterval mto-kb:FSharp ;
+    :hasMinorSeventhInterval mto-kb:EFlat ;
+    :hasMinorSixthInterval mto-kb:CSharp ;
+    :hasMinorThirdInterval mto-kb:GSharp ;
+    :hasPerfectFifthInterval mto-kb:C ;
+    :hasPerfectFourthInterval mto-kb:BFlat ;
+    :hasPerfectOctaveInterval mto-kb:F ;
+    :hasPerfectUnisonInterval mto-kb:F ;
+    :hasSemitone mto-kb:FSharp ;
+    :hasTritone mto-kb:B ;
+    :hasWholeStep mto-kb:G ;
+    :hasWholeTone mto-kb:G ;
+    rdfs:comment "Gbb Named Note" .
+
+mto-kb:GDoubleSharp a :Note ;
+    rdfs:label "G##" ;
+    :hasAugmentedFifthInterval mto-kb:F ;
     :hasAugmentedFourthInterval mto-kb:EFlat ;
     :hasAugmentedSecondInterval mto-kb:C ;
     :hasAugmentedSeventhInterval mto-kb:A ;
@@ -1749,7 +1662,46 @@ mto-kb:GSharpSharp :hasAugmentedFifthInterval mto-kb:F ;
     :hasSemitone mto-kb:BFlat ;
     :hasTritone mto-kb:EFlat ;
     :hasWholeStep mto-kb:B ;
-    :hasWholeTone mto-kb:B .
+    :hasWholeTone mto-kb:B ;
+    rdfs:comment "G## Named Note" .
+
+mto-kb:GFlat a :Note ;
+    rdfs:label "Gb"^^xsd:string,
+        "Gb" ;
+    :hasAugmentedFifthInterval mto-kb:D ;
+    :hasAugmentedFourthInterval mto-kb:C ;
+    :hasAugmentedSecondInterval mto-kb:A ;
+    :hasAugmentedSeventhInterval mto-kb:FSharp ;
+    :hasAugmentedSixthInterval mto-kb:E ;
+    :hasAugmentedThirdInterval mto-kb:B ;
+    :hasAugmentedUnisonInterval mto-kb:G ;
+    :hasDiminishedFifthInterval mto-kb:C ;
+    :hasDiminishedFourthInterval mto-kb:BFlat ;
+    :hasDiminishedOctaveInterval mto-kb:F ;
+    :hasDiminishedSecondInterval mto-kb:FSharp ;
+    :hasDiminishedSeventhInterval mto-kb:EFlat ;
+    :hasDiminishedSixthInterval mto-kb:CSharp ;
+    :hasDiminishedThirdInterval mto-kb:GSharp ;
+    :hasHalfStep mto-kb:G ;
+    :hasMajorSecondInterval mto-kb:GSharp ;
+    :hasMajorSeventhInterval mto-kb:F ;
+    :hasMajorSixthInterval mto-kb:EFlat ;
+    :hasMajorThirdInterval mto-kb:BFlat ;
+    :hasMinorSecondInterval mto-kb:G ;
+    :hasMinorSeventhInterval mto-kb:E ;
+    :hasMinorSixthInterval mto-kb:D ;
+    :hasMinorThirdInterval mto-kb:A ;
+    :hasPerfectFifthInterval mto-kb:CSharp ;
+    :hasPerfectFourthInterval mto-kb:B ;
+    :hasPerfectOctaveInterval mto-kb:FSharp ;
+    :hasPerfectUnisonInterval mto-kb:FSharp ;
+    :hasSemitone mto-kb:G ;
+    :hasTritone mto-kb:C ;
+    :hasWholeStep mto-kb:GSharp ;
+    :hasWholeTone mto-kb:GSharp ;
+    rdfs:comment "Gb Named Note"^^xsd:string,
+        "Gb Named Note" ;
+    owl:sameAs :FSharp .
 
 :mto.ttl a owl:Ontology ;
     dct:contributor "David C. De Roure"^^xsd:string,
@@ -2279,7 +2231,8 @@ mto-kb:A a :Note ;
     rdfs:comment "A Named Note"^^xsd:string .
 
 mto-kb:BFlat a :Note ;
-    rdfs:label "Bb"^^xsd:string ;
+    rdfs:label "Bb"^^xsd:string,
+        "Bb" ;
     :hasAugmentedFifthInterval mto-kb:FSharp ;
     :hasAugmentedFourthInterval mto-kb:E ;
     :hasAugmentedSecondInterval mto-kb:CSharp ;
@@ -2311,7 +2264,8 @@ mto-kb:BFlat a :Note ;
     :hasTritone mto-kb:E ;
     :hasWholeStep mto-kb:C ;
     :hasWholeTone mto-kb:C ;
-    rdfs:comment "Bb Named Note"^^xsd:string ;
+    rdfs:comment "Bb Named Note"^^xsd:string,
+        "Bb Named Note" ;
     owl:sameAs :ASharp .
 
 mto-kb:D a :Note ;
@@ -2350,7 +2304,8 @@ mto-kb:D a :Note ;
     rdfs:comment "D Named Note"^^xsd:string .
 
 mto-kb:GSharp a :Note ;
-    rdfs:label "G#"^^xsd:string ;
+    rdfs:label "G#"^^xsd:string,
+        "G#" ;
     :hasAugmentedFifthInterval mto-kb:E ;
     :hasAugmentedFourthInterval mto-kb:D ;
     :hasAugmentedSecondInterval mto-kb:B ;
@@ -2382,7 +2337,8 @@ mto-kb:GSharp a :Note ;
     :hasTritone mto-kb:D ;
     :hasWholeStep mto-kb:BFlat ;
     :hasWholeTone mto-kb:BFlat ;
-    rdfs:comment "G# Named Note"^^xsd:string ;
+    rdfs:comment "G# Named Note"^^xsd:string,
+        "G# Named Note" ;
     owl:sameAs :AFlat .
 
 mto-kb:B a :Note ;
@@ -2456,7 +2412,8 @@ mto-kb:C a :Note ;
     rdfs:comment "C Named Note"^^xsd:string .
 
 mto-kb:CSharp a :Note ;
-    rdfs:label "C#"^^xsd:string ;
+    rdfs:label "C#"^^xsd:string,
+        "C#" ;
     :hasAugmentedFifthInterval mto-kb:A ;
     :hasAugmentedFourthInterval mto-kb:G ;
     :hasAugmentedSecondInterval mto-kb:E ;
@@ -2488,7 +2445,8 @@ mto-kb:CSharp a :Note ;
     :hasTritone mto-kb:G ;
     :hasWholeStep mto-kb:EFlat ;
     :hasWholeTone mto-kb:EFlat ;
-    rdfs:comment "C# Named Note"^^xsd:string ;
+    rdfs:comment "C# Named Note"^^xsd:string,
+        "C# Named Note" ;
     owl:sameAs :DFlat .
 
 mto-kb:E a :Note ;
@@ -2527,7 +2485,8 @@ mto-kb:E a :Note ;
     rdfs:comment "E Named Note"^^xsd:string .
 
 mto-kb:EFlat a :Note ;
-    rdfs:label "Eb"^^xsd:string ;
+    rdfs:label "Eb"^^xsd:string,
+        "Eb" ;
     :hasAugmentedFifthInterval mto-kb:B ;
     :hasAugmentedFourthInterval mto-kb:A ;
     :hasAugmentedSecondInterval mto-kb:FSharp ;
@@ -2559,7 +2518,8 @@ mto-kb:EFlat a :Note ;
     :hasTritone mto-kb:A ;
     :hasWholeStep mto-kb:F ;
     :hasWholeTone mto-kb:F ;
-    rdfs:comment "Eb Named Note"^^xsd:string ;
+    rdfs:comment "Eb Named Note"^^xsd:string,
+        "Eb Named Note" ;
     owl:sameAs :DSharp .
 
 mto-kb:F a :Note ;
@@ -2598,7 +2558,8 @@ mto-kb:F a :Note ;
     rdfs:comment "F Named Note"^^xsd:string .
 
 mto-kb:FSharp a :Note ;
-    rdfs:label "F#"^^xsd:string ;
+    rdfs:label "F#"^^xsd:string,
+        "F#" ;
     :hasAugmentedFifthInterval mto-kb:D ;
     :hasAugmentedFourthInterval mto-kb:C ;
     :hasAugmentedSecondInterval mto-kb:A ;
@@ -2630,7 +2591,8 @@ mto-kb:FSharp a :Note ;
     :hasTritone mto-kb:C ;
     :hasWholeStep mto-kb:GSharp ;
     :hasWholeTone mto-kb:GSharp ;
-    rdfs:comment "F# Named Note"^^xsd:string ;
+    rdfs:comment "F# Named Note"^^xsd:string,
+        "F# Named Note" ;
     owl:sameAs :GFlat .
 
 mto-kb:G a :Note ;
