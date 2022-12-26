@@ -3152,7 +3152,6 @@ mto-kb:BFlat rdf:type owl:NamedIndividual ,
 ###  http://purl.org/ontology/mto/kb/BSharp
 mto-kb:BSharp rdf:type owl:NamedIndividual ,
                        mto:Note ;
-              owl:sameAs mto-kb:CFlat ;
               mto:hasAugmentedEleventhInterval mto-kb:FSharp ;
               mto:hasAugmentedFifthInterval mto-kb:GSharp ;
               mto:hasAugmentedFourteenthInterval mto-kb:C ;
