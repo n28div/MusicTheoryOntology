@@ -2,7 +2,6 @@
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix mto: <http://purl.org/ontology/mto/> .
 @prefix mto-kb: <http://purl.org/ontology/mto/kb/> .
-@prefix ns1: <http://www.w3.org/2003/11/swrl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -23,6 +22,9 @@ dct:license a owl:AnnotationProperty .
 dct:modified a owl:AnnotationProperty .
 
 dct:title a owl:AnnotationProperty .
+
+chord:Chord a owl:Class ;
+    owl:equivalentClass mto:Chord .
 
 chord:Interval a owl:Class ;
     owl:equivalentClass mto:Interval .
@@ -1227,6 +1229,13 @@ mto:hasMajorTenthInterval a owl:ObjectProperty ;
     rdfs:range mto:Note ;
     rdfs:subPropertyOf mto:hasInterval .
 
+mto:hasMajorThirdInterval a owl:ObjectProperty ;
+    rdfs:label "has major third" ;
+    rdfs:comment "Property to assign the major third to a note." ;
+    rdfs:domain mto:Note ;
+    rdfs:range mto:Note ;
+    rdfs:subPropertyOf mto:hasInterval .
+
 mto:hasMajorThirteenthInterval a owl:ObjectProperty ;
     rdfs:label "has major thirteen" ;
     rdfs:comment "Property to assign the major thirteen to a note." ;
@@ -1295,6 +1304,11 @@ mto:hasMinorThirteenthInterval a owl:ObjectProperty ;
     rdfs:domain mto:Note ;
     rdfs:range mto:Note ;
     rdfs:subPropertyOf mto:hasInterval .
+
+mto:hasNote a owl:ObjectProperty ;
+    rdfs:label "has note" ;
+    rdfs:comment "Property to assign a note of arbitary degree to a chord or scale"^^xsd:string ;
+    rdfs:range mto:Note .
 
 mto:hasNoteCount a owl:DatatypeProperty ;
     rdfs:label "has note count" ;
@@ -1450,10 +1464,9 @@ mto:mto.ttl a owl:Ontology ;
 
 skos:altLabel a owl:AnnotationProperty .
 
-chord:Chord a owl:Class ;
-    owl:equivalentClass mto:Chord .
-
 chord:Note a owl:Class .
+
+chord:root a owl:ObjectProperty .
 
 mto:AugmentedFifthInterval a owl:Class,
         owl:NamedIndividual ;
@@ -1653,18 +1666,6 @@ mto:Tritave a owl:Class,
     rdfs:comment "An interval encompassing nineteen semitones"^^xsd:string ;
     rdfs:subClassOf mto:PerfectInterval .
 
-mto:hasMajorThirdInterval a owl:ObjectProperty ;
-    rdfs:label "has major third" ;
-    rdfs:comment "Property to assign the major third to a note." ;
-    rdfs:domain mto:Note ;
-    rdfs:range mto:Note ;
-    rdfs:subPropertyOf mto:hasInterval .
-
-mto:hasNote a owl:ObjectProperty ;
-    rdfs:label "has note" ;
-    rdfs:comment "Property to assign a note of arbitary degree to a chord or scale"^^xsd:string ;
-    rdfs:range mto:Note .
-
 mto-kb:AFlat a mto:Note,
         owl:NamedIndividual ;
     rdfs:label "Ab"^^xsd:string,
@@ -1731,8 +1732,6 @@ mto-kb:AFlat a mto:Note,
     owl:sameAs mto-kb:GSharp .
 
 sio:TimeInterval a owl:Class .
-
-chord:root a owl:ObjectProperty .
 
 mto:DiminishedFifthInterval a owl:Class,
         owl:NamedIndividual ;
@@ -2939,12 +2938,6 @@ mto-kb:GDoubleSharp a mto:Note ;
     owl:sameAs mto-kb:A,
         mto-kb:BDoubleFlat .
 
-<urn:swrl:var#i> a ns1:Variable .
-
-<urn:swrl:var#n> a ns1:Variable .
-
-<urn:swrl:var#r> a ns1:Variable .
-
 mto:Clef a owl:Class ;
     rdfs:label "Clef"^^xsd:string ;
     rdfs:comment "A musical symbol used to indicate the pitch of notes on a stave"^^xsd:string ;
@@ -3396,12 +3389,18 @@ mto:PerfectEleventhInterval a owl:Class,
     rdfs:subClassOf mto:PerfectInterval ;
     skos:altLabel "P11"^^xsd:string .
 
-<urn:swrl:var#c> a ns1:Variable .
-
 mto:Accidental a owl:Class ;
     rdfs:label "Acidental"^^xsd:string ;
     rdfs:comment "A notation symbol on a stave that represents a change in the pitch of a note"^^xsd:string ;
     rdfs:subClassOf mto:MusicalNotation .
+
+mto:MajorThirdInterval a owl:Class,
+        owl:NamedIndividual ;
+    rdfs:label "Major Third"^^xsd:string ;
+    mto:hasSemitoneCount 4 ;
+    rdfs:comment "An interval encompassing four semitones"^^xsd:string ;
+    rdfs:subClassOf mto:MajorInterval ;
+    skos:altLabel "M3"^^xsd:string .
 
 mto:MinorSeventhInterval a owl:Class,
         owl:NamedIndividual ;
@@ -3435,14 +3434,6 @@ mto:Tone a owl:Class ;
     rdfs:label "Tone"^^xsd:string ;
     rdfs:comment "A categorization of an interval"^^xsd:string ;
     rdfs:subClassOf mto:Interval .
-
-mto:MajorThirdInterval a owl:Class,
-        owl:NamedIndividual ;
-    rdfs:label "Major Third"^^xsd:string ;
-    mto:hasSemitoneCount 4 ;
-    rdfs:comment "An interval encompassing four semitones"^^xsd:string ;
-    rdfs:subClassOf mto:MajorInterval ;
-    skos:altLabel "M3"^^xsd:string .
 
 mto:SeventhTetrad a owl:Class ;
     rdfs:label "Seventh Tetrad"^^xsd:string ;
@@ -4316,37 +4307,5 @@ mto-kb:FSharp a mto:Note,
         "F# Named Note" ;
     owl:sameAs mto-kb:EDoubleSharp,
         mto-kb:GFlat .
-
-[] a ns1:Imp ;
-    ns1:body [ a ns1:AtomList ;
-            rdf:first [ a ns1:ClassAtom ;
-                    ns1:argument1 <urn:swrl:var#c> ;
-                    ns1:classPredicate chord:Chord ] ;
-            rdf:rest [ a ns1:AtomList ;
-                    rdf:first [ a ns1:IndividualPropertyAtom ;
-                            ns1:argument1 <urn:swrl:var#c> ;
-                            ns1:argument2 <urn:swrl:var#r> ;
-                            ns1:propertyPredicate chord:root ] ;
-                    rdf:rest [ a ns1:AtomList ;
-                            rdf:first [ a ns1:IndividualPropertyAtom ;
-                                    ns1:argument1 <urn:swrl:var#c> ;
-                                    ns1:argument2 <urn:swrl:var#i> ;
-                                    ns1:propertyPredicate chord:interval ] ;
-                            rdf:rest [ a ns1:AtomList ;
-                                    rdf:first [ a ns1:ClassAtom ;
-                                            ns1:argument1 <urn:swrl:var#i> ;
-                                            ns1:classPredicate mto:MajorThirdInterval ] ;
-                                    rdf:rest [ a ns1:AtomList ;
-                                            rdf:first [ a ns1:IndividualPropertyAtom ;
-                                                    ns1:argument1 <urn:swrl:var#r> ;
-                                                    ns1:argument2 <urn:swrl:var#n> ;
-                                                    ns1:propertyPredicate mto:hasMajorThirdInterval ] ;
-                                            rdf:rest () ] ] ] ] ] ;
-    ns1:head [ a ns1:AtomList ;
-            rdf:first [ a ns1:IndividualPropertyAtom ;
-                    ns1:argument1 <urn:swrl:var#c> ;
-                    ns1:argument2 <urn:swrl:var#n> ;
-                    ns1:propertyPredicate mto:hasNote ] ;
-            rdf:rest () ] .
 
 

@@ -4083,8 +4083,8 @@ mto:AugmentedSecondInterval rdfs:comment "The interval produced by augmenting a 
                             rdfs:label "Augmented Second"^^xsd:string .
 
 
-mto:AugmentedSeventhInterval rdfs:label "Augmented Seventh"^^xsd:string ;
-                             rdfs:comment "The interval produced by augmenting a major seventh by one chromatic semitone"^^xsd:string ;
+mto:AugmentedSeventhInterval rdfs:comment "The interval produced by augmenting a major seventh by one chromatic semitone"^^xsd:string ;
+                             rdfs:label "Augmented Seventh"^^xsd:string ;
                              skos:altLabel "A7"^^xsd:string .
 
 
@@ -4212,8 +4212,8 @@ mto:DiminishedSixthInterval skos:altLabel "d6"^^xsd:string ;
                             rdfs:comment "The interval produced by diminishing a minor sixth by one chromatic semitone"^^xsd:string .
 
 
-mto:DiminishedTenthInterval rdfs:label "Diminished Tenth"^^xsd:string ;
-                            skos:altLabel "d10"^^xsd:string ;
+mto:DiminishedTenthInterval skos:altLabel "d10"^^xsd:string ;
+                            rdfs:label "Diminished Tenth"^^xsd:string ;
                             rdfs:comment "The interval produced by diminishing a minor tenth by one chromatic semitone"^^xsd:string .
 
 
@@ -4267,8 +4267,8 @@ mto:HalfDiminishedSeventhTetrad rdfs:comment "A chord consisting of a root note,
 
 
 mto:HalfStep rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
-             rdfs:label "Half Step"^^xsd:string ;
-             skos:altLabel "S"^^xsd:string .
+             skos:altLabel "S"^^xsd:string ;
+             rdfs:label "Half Step"^^xsd:string .
 
 
 mto:HarmonicMinorScale rdfs:comment "A heptatonic scale following a T-S-T-T-S-[T+S]-S interval pattern"^^xsd:string ;
@@ -4281,8 +4281,8 @@ mto:Hemidemisemiquaver rdfs:comment "Note played for a sixteenth the length of a
 
 
 mto:HemidemisemiquaverRest rdfs:comment "Rest for a sixteenth the length of a beat"^^xsd:string ;
-                           rdfs:label "Hemidemisemiquaver Rest"^^xsd:string ;
-                           skos:altLabel "Sixty-Fourth Rest"^^xsd:string .
+                           skos:altLabel "Sixty-Fourth Rest"^^xsd:string ;
+                           rdfs:label "Hemidemisemiquaver Rest"^^xsd:string .
 
 
 mto:Heptad skos:altLabel "Heptachord"^^xsd:string ;
@@ -4434,8 +4434,8 @@ mto:MinorSecondInterval rdfs:comment "An interval of a single chromatic semitone
 
 
 mto:MinorSeventhInterval skos:altLabel "m7"^^xsd:string ;
-                         rdfs:label "Minor Seventh"^^xsd:string ;
-                         rdfs:comment "An interval encompassing ten semitones"^^xsd:string .
+                         rdfs:comment "An interval encompassing ten semitones"^^xsd:string ;
+                         rdfs:label "Minor Seventh"^^xsd:string .
 
 
 mto:MinorSeventhTetrad rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a minor 7th above the root"^^xsd:string ;
@@ -4620,62 +4620,5 @@ mto:WholeTone skos:altLabel "T"^^xsd:string ;
               rdfs:comment "An interval of two semitones"^^xsd:string ;
               rdfs:label "Whole Tone"^^xsd:string .
 
-
-#################################################################
-#    Rules
-#################################################################
-
-<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<urn:swrl:var#r> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<urn:swrl:var#i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-<urn:swrl:var#n> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
-
-[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
-   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> chord:Chord ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c>
-                                                     ] ;
-                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> chord:root ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
-                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#r>
-                                                                ] ;
-                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> chord:interval ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
-                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i>
-                                                                           ] ;
-                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                                                        <http://www.w3.org/2003/11/swrl#classPredicate> mto:MajorThirdInterval ;
-                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
-                                                                                      ] ;
-                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#propertyPredicate> mto:hasMajorThirdInterval ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#r> ;
-                                                                                                   <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n>
-                                                                                                 ] ;
-                                                                                       rdf:rest rdf:nil
-                                                                                     ]
-                                                                          ]
-                                                               ]
-                                                    ]
-                                         ] ;
-   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
-                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> mto:hasNote ;
-                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#c> ;
-                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#n>
-                                                     ] ;
-                                           rdf:rest rdf:nil
-                                         ]
- ] .
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
