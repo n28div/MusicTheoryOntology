@@ -1443,7 +1443,7 @@ mto:MajorNinthInterval rdf:type owl:Class ;
 
 ###  http://purl.org/ontology/mto/MajorNinthPentad
 mto:MajorNinthPentad rdf:type owl:Class ;
-                     owl:equivalentClass [ owl:intersectionOf ( mto:MajorSeventhInterval
+                     owl:equivalentClass [ owl:intersectionOf ( mto:MajorSeventhTetrad
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty chord:interval ;
                                                                   owl:hasValue mto:MajorNinthInterval
@@ -1670,7 +1670,7 @@ mto:MinorNinthInterval rdf:type owl:Class ;
 
 ###  http://purl.org/ontology/mto/MinorNinthPentad
 mto:MinorNinthPentad rdf:type owl:Class ;
-                     owl:equivalentClass [ owl:intersectionOf ( mto:MinorSeventhInterval
+                     owl:equivalentClass [ owl:intersectionOf ( mto:MinorSeventhTetrad
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty chord:interval ;
                                                                   owl:hasValue mto:MajorNinthInterval
@@ -4211,8 +4211,8 @@ mto:DiminishedSixthInterval skos:altLabel "d6"^^xsd:string ;
                             rdfs:comment "The interval produced by diminishing a minor sixth by one chromatic semitone"^^xsd:string .
 
 
-mto:DiminishedTenthInterval rdfs:label "Diminished Tenth"^^xsd:string ;
-                            skos:altLabel "d10"^^xsd:string ;
+mto:DiminishedTenthInterval skos:altLabel "d10"^^xsd:string ;
+                            rdfs:label "Diminished Tenth"^^xsd:string ;
                             rdfs:comment "The interval produced by diminishing a minor tenth by one chromatic semitone"^^xsd:string .
 
 
@@ -4227,8 +4227,8 @@ mto:DiminishedThirteenthInterval skos:altLabel "d13"^^xsd:string ;
 
 
 mto:DiminishedTriad rdfs:comment "A chord consisting of a root note, a minor third above the root, and a diminished fifth above the root"^^xsd:string ;
-                    skos:altLabel "dim"^^xsd:string ;
-                    rdfs:label "Diminished Triad"^^xsd:string .
+                    rdfs:label "Diminished Triad"^^xsd:string ;
+                    skos:altLabel "dim"^^xsd:string .
 
 
 mto:DiminishedTwelfthInterval rdfs:comment "The interval produced by diminishing a perfect twelfth by one chromatic semitone"^^xsd:string ;
@@ -4261,8 +4261,8 @@ mto:Ennead rdfs:label "Ennead"^^xsd:string ;
 
 
 mto:HalfDiminishedSeventhTetrad rdfs:comment "A chord consisting of a root note, a minor third above the root, a diminished fifth above the root, and a minor 7th above the root"^^xsd:string ;
-                                rdfs:label "Half Diminished Seventh Tetrad"^^xsd:string ;
-                                skos:altLabel "dim7"^^xsd:string .
+                                skos:altLabel "dim7"^^xsd:string ;
+                                rdfs:label "Half Diminished Seventh Tetrad"^^xsd:string .
 
 
 mto:HalfStep rdfs:comment "The interval between two adjacent notes on a 12-note scale"^^xsd:string ;
@@ -4280,8 +4280,8 @@ mto:Hemidemisemiquaver rdfs:comment "Note played for a sixteenth the length of a
 
 
 mto:HemidemisemiquaverRest rdfs:comment "Rest for a sixteenth the length of a beat"^^xsd:string ;
-                           rdfs:label "Hemidemisemiquaver Rest"^^xsd:string ;
-                           skos:altLabel "Sixty-Fourth Rest"^^xsd:string .
+                           skos:altLabel "Sixty-Fourth Rest"^^xsd:string ;
+                           rdfs:label "Hemidemisemiquaver Rest"^^xsd:string .
 
 
 mto:Heptad skos:altLabel "Heptachord"^^xsd:string ;
@@ -4414,8 +4414,8 @@ mto:MinorMajorSeventhTetrad rdfs:label "Minor (Major Seventh) Tetrad"^^xsd:strin
 
 
 mto:MinorNinthInterval skos:altLabel "m9"^^xsd:string ;
-                       rdfs:label "Minor Ninth"^^xsd:string ;
-                       rdfs:comment "An interval encompassing thirteen semitones"^^xsd:string .
+                       rdfs:comment "An interval encompassing thirteen semitones"^^xsd:string ;
+                       rdfs:label "Minor Ninth"^^xsd:string .
 
 
 mto:MinorNinthPentad rdfs:label "Minor Ninth Pentad"^^xsd:string ;
@@ -4433,8 +4433,8 @@ mto:MinorSecondInterval rdfs:comment "An interval of a single chromatic semitone
 
 
 mto:MinorSeventhInterval skos:altLabel "m7"^^xsd:string ;
-                         rdfs:comment "An interval encompassing ten semitones"^^xsd:string ;
-                         rdfs:label "Minor Seventh"^^xsd:string .
+                         rdfs:label "Minor Seventh"^^xsd:string ;
+                         rdfs:comment "An interval encompassing ten semitones"^^xsd:string .
 
 
 mto:MinorSeventhTetrad rdfs:comment "A chord consisting of a root note, a minor third above the root, a perfect fifth above the root, and a minor 7th above the root"^^xsd:string ;
@@ -4508,8 +4508,8 @@ mto:PerfectDoubleOctaveInterval skos:altLabel "P15"^^xsd:string ;
                                 rdfs:comment "An interval where the starting (lower) note is one third of the frequency of the ending note"^^xsd:string .
 
 
-mto:PerfectEleventhInterval rdfs:comment "An interval encompassing seventeen semitones"^^xsd:string ;
-                            skos:altLabel "P11"^^xsd:string ;
+mto:PerfectEleventhInterval skos:altLabel "P11"^^xsd:string ;
+                            rdfs:comment "An interval encompassing seventeen semitones"^^xsd:string ;
                             rdfs:label "Perfect Eleventh"^^xsd:string .
 
 
