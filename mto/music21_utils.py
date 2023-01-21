@@ -12,6 +12,7 @@ from music21.note import Note
 from music21.pitch import Pitch
 from harte.harte import Harte
 from urllib.parse import quote
+from itertools import product
 
 FILE_DIR = os.path.dirname(os.path.realpath(__file__))
 MTO_ONT = os.path.join(FILE_DIR, "..", "ont", "mto.ttl")
@@ -81,7 +82,11 @@ def convert_chord(chord: str, prefix: str) -> rdflib.Graph:
   chord_graph = rdflib.Graph()
 
   harte = Harte(chord)
-  intervals = harte.annotateIntervals(inPlace=False, stripSpecifiers=False, returnList=True)
+
+  # annotate intervals manually, since annotateIntervals doesn't work
+  # for extensions
+  intervals = [Interval(n1, n2).name
+               for n1, n2 in product([harte.notes[0]], harte.notes[1:])]
 
   if len(intervals) > 0:
     root = harte.root()
@@ -105,4 +110,4 @@ def convert_chord(chord: str, prefix: str) -> rdflib.Graph:
   return chord_graph
 
 if __name__ == "__main__":
-  print(convert_chord("A", "ciao").serialize())
+  print(convert_chord("C:dim", "ciao").serialize())
